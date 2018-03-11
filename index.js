@@ -10,7 +10,6 @@ var server = app.listen(PORT, function() {
 
 // Static files
 app.use(express.static('public'));
-app.get('/', (req, res) => res.render('public/index'))
 // Socket setup & pass server
 var io = socket(server);
 io.on('connection', (socket) => {
