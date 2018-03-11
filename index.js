@@ -29,7 +29,7 @@ io.on('connection', (socket) => {
 
     // Handle typing event
     socket.on('removetyping', function(data) {
-        socket.broadcast.emit('typing', data);
+        socket.broadcast.emit('removetyping', data);
     });
 
 });
