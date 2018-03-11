@@ -17,13 +17,27 @@ btn.addEventListener('click', function() {
     message.value = "";
 });
 
+btn.addEventListener("keyup", function(event) {
+    // Cancel the default action, if needed
+    event.preventDefault();
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+        // Trigger the button element with a click
+        socket.emit('chat', {
+            message: message.value,
+            handle: handle.value
+        });
+        message.value = "";
+    }
+});
+
 message.addEventListener('focus', function() {
     socket.emit('typing', handle.value);
-})
+});
 
 handle.addEventListener('focus', function() {
     socket.emit('removetyping', handle.value);
-})
+});
 
 // Listen for events
 socket.on('chat', function(data) {
