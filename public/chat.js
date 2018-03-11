@@ -31,7 +31,7 @@ message.addEventListener("keyup", function(event) {
     }
 });
 
-message.addEventListener('focus', function() {
+message.addEventListener('keypress', function() {
     socket.emit('typing', handle.value);
 });
 
