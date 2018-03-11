@@ -17,7 +17,7 @@ btn.addEventListener('click', function() {
     message.value = "";
 });
 
-btn.addEventListener("keyup", function(event) {
+message.addEventListener("keyup", function(event) {
     // Cancel the default action, if needed
     event.preventDefault();
     // Number 13 is the "Enter" key on the keyboard
