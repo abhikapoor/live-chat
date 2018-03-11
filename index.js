@@ -9,7 +9,7 @@ var server = app.listen(5000, function() {
 
 // Static files
 app.use(express.static('public'));
-
+app..get('/', (req, res) => res.render('public/index'))
 // Socket setup & pass server
 var io = socket(server);
 io.on('connection', (socket) => {
