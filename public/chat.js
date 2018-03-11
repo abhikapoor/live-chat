@@ -21,6 +21,10 @@ message.addEventListener('focus', function() {
     socket.emit('typing', handle.value);
 })
 
+handle.addEventListener('focus', function() {
+    socket.emit('removetyping', handle.value);
+})
+
 // Listen for events
 socket.on('chat', function(data) {
     feedback.innerHTML = '';
@@ -29,4 +33,8 @@ socket.on('chat', function(data) {
 
 socket.on('typing', function(data) {
     feedback.innerHTML = '<p><em>' + data + ' is typing a message...</em></p>';
+});
+
+socket.on('removetyping', function(data) {
+    feedback.innerHTML = '';
 });

@@ -27,4 +27,9 @@ io.on('connection', (socket) => {
         socket.broadcast.emit('typing', data);
     });
 
+    // Handle typing event
+    socket.on('removetyping', function(data) {
+        socket.broadcast.emit('typing', data);
+    });
+
 });
