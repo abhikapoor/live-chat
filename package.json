@@ -22,5 +22,13 @@
   },
   "devDependencies": {
     "nodemon": "^1.11.0"
-  }
+  },
+  "buildpacks": [{
+      "url": "https://github.com/heroku/heroku-buildpack-pgbouncer"
+    },
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+
 }
