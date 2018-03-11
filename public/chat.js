@@ -17,7 +17,7 @@ btn.addEventListener('click', function() {
     message.value = "";
 });
 
-message.addEventListener('keypress', function() {
+message.addEventListener('focus', function() {
     socket.emit('typing', handle.value);
 })
 
