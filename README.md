@@ -1,2 +1,2 @@
-# websockets-playlist
-All the course files for the WebSockets playlist on The Net Ninja YouTube channel.
+# Live-Chat
+Creating a live chat application using socket.io library.
